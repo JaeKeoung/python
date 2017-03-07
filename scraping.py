@@ -1,3 +1,4 @@
+#web scraping code
 from bs4 import BeautifulSoup
 import urllib.request
 response=urllib.request.urlopen('http://www.clien.net/cs2/bbs/board.php?bo_table=news')

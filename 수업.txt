@@ -1,0 +1,41 @@
+cmd
+pip install beautifulsoup4
+pip install html5lib
+
+IDLE사용
+
+Shell Restart(ctr+f6아님 위에 창에서)
+
+import types
+dir(types)하면 자료형들이 나온다.
+
+print (""" """)하면 그냥 줄바꿈해서도 출력된다.
+
+\, : 는 줄바꿈 가능하게 해줌.
+
+a=python
+a[0:1]하면 p출력
+a[-2:]하면 on출력
+(인덱스 값들은 공백도 포함)
+
+list []사용
+배열같은 걸 쓰는데 배열이 아니라 list라고 한다. type()쓰면 list라고 나옴.
+append(+=['']로도 사용 가능, []를 안쓰고 ''만해서 넣을 경우 글자들이 다 쪼개져서 들어간다...), insert(), remove(remove는 인덱스가 아니라 문자로 빼는 것), reverse()사용가능.
+index()로 인덱스 확인 가능(cyan, magenta, cyan일 경우 '',1을 해서 두번째 인자의 인덱스를 확인하는 것도 가능.)
+count()는 ()안에 있는 인자가 list에 몇 개 있는지 세 준다.
+pop()은 맨 끝에 인자 하나만 꺼내버림.(()안에 들어가는 숫자는 인덱스로 취급되서 그 인덱스의 인자가 빠져버린다.)
+
+set(집합) {}사용
+a.union(b), | 합집합
+a.intersection(b), & 교집합
+
+tuple ()사용
+(a,b)=(1,2)하면 a출력할 땐 1, b출력할 땐 2가 나온다.
+함수를 만들 때 잘 사용됨.(함수 만드는 건 def)
+example1. def calc(a,b):
+	return a+b, a*b
+x, y = calc(5,6)
+print(x, y)는 11, 30이 출력됨.
+example2. print('id:%s, name:%s'%('tom','톰'))
+
+형변환 가능. set(), list(), tuple()안에 넣으면 형변환이 된다.
