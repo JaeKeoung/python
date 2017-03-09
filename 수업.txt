@@ -1,3 +1,4 @@
+webscraping
 cmd
 pip install beautifulsoup4
 pip install html5lib
@@ -13,12 +14,25 @@ print (""" """)하면 그냥 줄바꿈해서도 출력된다.
 
 \, : 는 줄바꿈 가능하게 해줌.
 
+**은 제곱(*은 그냥 곱하기) 
+//몫만 구함 
+%나머지 구함
+
+어떤 메소드들을 쓸 수 있는지는 dir을 해보면 된다.(dir(dict))
+
+변수1=변수2를 하면 변수1은 변수2의 값만 복사하는게 아니라 아예 같은 변수가 된다.(변수2를 clear()시키면 변수1도 날라갈 수 있음. 반대의 경우도 가능. 하지만 clear()한 후에 다시 변수 1에다가 값을 집어넣을 경우 변수 1에만 값이 들어간다.)
+이 경우는 주소도 같게 나온다.(주소확인은 id())
+얘들이 연결되지 않게 하고 복사하려면 b=a[:]로 하면 된다.(주소도 달라짐)
+이걸 얕은복사(주소복사), 깊은복사(값 복사) 라고 한다.
+deepcopy()메소드도 있음.(import copy, b=copy.deepcopy(a))
+
 a=python
 a[0:1]하면 p출력
 a[-2:]하면 on출력
 (인덱스 값들은 공백도 포함)
 
 list []사용
+list는 내용을 바꿀 수 있다.
 배열같은 걸 쓰는데 배열이 아니라 list라고 한다. type()쓰면 list라고 나옴.
 append(+=['']로도 사용 가능, []를 안쓰고 ''만해서 넣을 경우 글자들이 다 쪼개져서 들어간다...), insert(), remove(remove는 인덱스가 아니라 문자로 빼는 것), reverse()사용가능.
 index()로 인덱스 확인 가능(cyan, magenta, cyan일 경우 '',1을 해서 두번째 인자의 인덱스를 확인하는 것도 가능.)
@@ -30,6 +44,7 @@ a.union(b), | 합집합
 a.intersection(b), & 교집합
 
 tuple ()사용
+tuple은 내용을 바꿀 수 없다.
 (a,b)=(1,2)하면 a출력할 땐 1, b출력할 땐 2가 나온다.
 함수를 만들 때 잘 사용됨.(함수 만드는 건 def)
 example1. def calc(a,b):
@@ -38,4 +53,18 @@ x, y = calc(5,6)
 print(x, y)는 11, 30이 출력됨.
 example2. print('id:%s, name:%s'%('tom','톰'))
 
+dict dict()사용, {}, []도 사용가능?
+color={"apple":"red"}(이런식으로)
+dict는 순서가 없어서 인덱스도 없다. key값으로 꺼내야함.
+추가가능 color["cherry"]="red"
+items()를 응용해서 tuple로 출력 가능(for c in color.items():print(c))
+keys()를 사용해서 key값만 출력 가능
+values()를 사용해서 values만 출력 가능
+del에 key값을 설정해서 삭제 가능(del color["cherry"])
+clear()로 모두 한꺼번에 삭제 가능
+dict안에는 다른 형을 넣는것도 가능하다.(dict타입도 넣을 수 있음)(test={'age': 40.5, 'job': [1, 2, 3], 'name': {'kim': 2, 'cho': 1}}이 가능)
+dict형을 다른 변수 안에 넣으면 그 변수도 dict이다.
+
 형변환 가능. set(), list(), tuple()안에 넣으면 형변환이 된다.
+
+values()같은것들을 보고 메소드라고 부른다.(class안에 있는 함수니까)
